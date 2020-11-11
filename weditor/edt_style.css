@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+  
+.edt {
+  border: none;
+  font-family: 'Nunito', Arial, sans-serif;
+  border-radius: 3px;
+  background-color: white;
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  outline: 0;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.edt:hover {
+  background: #f1f3f4;
+}
+  
+.saved,
+.saved:hover {
+  color: green;
+  cursor: not-allowed;
+  background-color: white !important;
+}
+
+.titledoc {
+  font-family: 'Questrial', Arial, sans-serif;
+  padding: 6px;
+  font-size: 20px;
+  outline: 0;
+  max-height: 80px;
+  overflow: hidden;
+  border: 2px solid #d2d2d2;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition-duration: 0.3s;
+}
+  
+.titledoc:focus {
+  border: 2px solid #1a73e8;
+}
+
+.mini-link {
+  cursor: pointer;
+  font-family: 'Nunito', Arial, sans-serif !important;
+  text-decoration: none;
+  color: grey;
+  font-size: 14px;
+}
+
+.mini-link:hover {
+  text-decoration: underline;
+}
+
+#text_undo.disabled,#text_redo.disabled{
+  color: #ccc;
+  }
+
+div[weditor] {
+  height: 480px;
+  border: 1px solid #d2d2d2;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 0 !important;
+  font-family: Arial, sans-serif !important;
+  overflow: auto;
+  outline: 0;
+}
+
+textarea[code] {
+  resize: none;
+}
+
+.words::before {
+  content: 'Mots : ';
+}
+
+.words {
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: black;
+  padding: 10px 15px;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !importants
+}
+
+.inputcolor {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  box-sizing: border-box;
+}
+  
+.dlist {
+  display: block;
+  border: 1px solid #ffddab;
+  background-color: #ffe6c0;
+  font-family: Arial, sans-serif !important;
+  color: black !important;
+  text-decoration: none !important;
+  padding: 10px;
+  word-wrap: break-word;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  outline: 0;
+}
+
+.dlist:hover {
+  background-color: #ffddab;
+}
+  
+.datedocs {
+  font-family: Arial, sans-serif !important;
+  color: #43b581;
+  font-size: 12px;
+  float: right;
+}
+  
+.datedocs:after {
+  content: '\0000A0';
+}
+  
+.dltdocs {
+  font-family: Arial, sans-serif !important;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  margin: 0;
+  font-size: 12px;
+  float: right;
+}
+  
+.dltdocs:hover {
+  text-decoration: underline;
+}
+  
+.modalcss {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+  
+.modalinput {
+  width: 100%;
+  padding: 11px;
+  font-size: 14px;
+  border: 2px solid #f5b512;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  outline: 0;
+}
+  
+.modalinputbs {
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: white;
+  transition-duration: 0.2s;
+  padding: 10px 15px;
+  border: none;
+  outline: 0;
+}
+  
+.modalinputbs:hover {
+  background: #f1f3f4;
+}
+  
+.modal-css-content {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  width: 50%;
+  max-height: 85%;
+  overflow: auto;
+  font-family: 'Questrial', sans-serif;
+  box-shadow: 0px 0px 20px 2px rgba(119, 119, 119, 0.5);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(119, 119, 119, 0.5);
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(119, 119, 119, 0.5);
+}
+  
+.modal-css-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-css-content::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 5px;
+}
+
+.modal-css-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.modal-css-content::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+[weditor]::-webkit-scrollbar {
+  width: 10px;
+}
+
+[weditor]::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+[weditor]::-webkit-scrollbar-thumb {
+  cursor: default !important;
+  background: #888;
+}
+
+[weditor]::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.modal-title {
+  color: black;
+  font-size: 24px;
+}
+  
+.confirm-btn {
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+.delete {background-color: #ff3838;opacity: 0.8;transition-duration: 0.3s;}
+.delete:hover {opacity: 1;}
+
+.cancel {background-color: #43b581;opacity: 0.8;transition-duration: 0.3s;}
+.cancel:hover {opacity: 1;}
+  
+.close {background-color: #1a73e8;opacity: 0.8;transition-duration: 0.3s;}
+.close:hover {opacity: 1;}
+  
+.colorbtn {
+  border: none;
+  border-radius: 3px;
+  padding: 25px 25px;
+  cursor: pointer;
+  outline: 0;
+  opacity: 0.8;
+  transition-duration: 0.3s;
+  content: '\000020';
+  margin-bottom: 5px;
+}
+  
+.colorbtn:hover {
+  opacity: 1;
+}
+
+[aria-label] {
+  position: relative;
+}
+
+[aria-label]:hover:after,
+[aria-label]:focus:after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: -2.4em;
+  left: 50%;
+	transform: translateX(-50%);
+  z-index: 1;
+  white-space: nowrap;
+  padding: 5px 14px;
+  background: #000000;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.3);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.3);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.3);
+}
+
+[aria-label]:focus {
+  outline: none;
+}
+
+.styleslist {
+  width: 100%;
+  border: 1px solid #d2d2d2;
+  font-family: 'Nunito', Arial, sans-serif;
+  border-radius: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+  color: black;
+  padding: 14px 15px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.styleslist:hover {
+  border: 1px solid #0167b8;
+}
+  
+@media screen and (max-device-width:480px) {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+  
+.edt {
+  border: none;
+  font-family: 'Nunito', Arial, sans-serif;
+  border-radius: 3px;
+  background-color: white;
+  font-size: 60px;
+  margin-bottom: 5px;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.edt:hover {
+  background: #f1f3f4;
+}
+  
+.saved,
+.saved:hover {
+  color: green;
+  cursor: not-allowed;
+  background-color: white !important;
+}
+
+.titledoc {
+  width: 100%;
+  font-family: 'Questrial', Arial, sans-serif;
+  padding: 12px !important;
+  font-size: 75px;
+  outline: 0;
+  overflow: hidden;
+  border: 2px solid #d2d2d2;
+  border-radius: 0px !important;
+  margin-bottom: 5px;
+  transition-duration: 0.3s;
+}
+  
+.titledoc:focus {
+  border: 2px solid #1a73e8;
+}
+
+.mini-link {
+  cursor: pointer;
+  font-family: 'Nunito', Arial, sans-serif !important;
+  text-decoration: none;
+  color: grey;
+  font-size: 50px;
+}
+
+.mini-link:hover {
+  text-decoration: underline;
+}
+
+div[weditor] {
+  height: 980px;
+  border: 1px solid #d2d2d2;
+  background-color: #ffffff;
+  padding: 10px;
+  font-size: 60px;
+  margin: 0 !important;
+  font-family: Arial, sans-serif !important;
+  overflow: auto;
+  outline: 0;
+}
+
+textarea[code] {
+  resize: none;
+  height: 100% !important;
+  font-size: 55px;
+}
+
+.inputcolor {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+[aria-label]:hover:after,
+[aria-label]:focus:after {
+  display: none !important;
+}
+  
+.dltdocs {
+  font-size: 50px;
+}
+  
+.dlist {
+  display: block;
+  border: 1px solid #ffddab;
+  background-color: #ffe6c0;
+  font-family: Arial, sans-serif !important;
+  color: black !important;
+  text-decoration: none !important;
+  padding: 40px !important;
+  word-wrap: break-word;
+  font-size: 50px;
+  cursor: pointer;
+  text-align: center;
+  outline: 0;
+}
+
+.dlist:hover {
+  background-color: #ffddab;
+}
+  
+.datedocs {
+  font-family: Arial, sans-serif !important;
+  color: #43b581;
+  font-size: 45px;
+  float: right;
+}
+  
+.datedocs:after {
+  content: '\0000A0';
+}
+  
+.modalcss {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  overflow: auto;
+  background-color: white;
+}
+  
+.modalinput {
+  width: 100%;
+  padding: 12px;
+  font-size: 60px;
+  border: 2px solid #f5b512;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  outline: 0;
+}
+  
+.modalinputbs {
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: white;
+  transition-duration: 0.2s;
+  padding: 10px 15px;
+  border: none;
+  outline: 0;
+}
+  
+.modalinputbs:hover {
+  background: #f1f3f4;
+}
+  
+.modal-css-content {
+  background-color: #fefefe;
+  padding: 0px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  overflow: auto;
+  font-family: 'Questrial', sans-serif;
+}
+  
+.modal-css-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-css-content::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 0px !important;
+}
+
+.modal-css-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0px !important;
+}
+
+.modal-css-content::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.modal-title {
+  color: black;
+  text-align: center !important;
+  font-size: 90px;
+}
+  
+.des_resize {
+  text-align: center !important;
+  font-size: 65px !important;
+}
+  
+.modal_resize {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  text-align: center;
+  font-size: 65px !important;
+}
+  
+.confirm-btn {
+  width: 100%;
+  display: block;
+  border: none;
+  color: white;
+  font-size: 60px;
+  border-radius: 0px !important;
+  padding: 40px 15px !important;
+  cursor: pointer;
+  outline: none;
+}
+
+.delete {background-color: #ff3838;opacity: 0.8;transition-duration: 0.3s;}
+.delete:hover {opacity: 1;}
+
+.cancel {background-color: #43b581;opacity: 0.8;transition-duration: 0.3s;}
+.cancel:hover {opacity: 1;}
+  
+.close {background-color: #1a73e8;opacity: 0.8;transition-duration: 0.3s;}
+.close:hover {opacity: 1;}
+  
+.colorbtn {
+  border: none;
+  border-radius: 3px;
+  padding: 45px 45px;
+  cursor: pointer;
+  outline: 0;
+  opacity: 0.8;
+  transition-duration: 0.3s;
+  content: '\000020';
+  margin-bottom: 5px;
+}
+  
+.colorbtn:hover {
+  opacity: 1;
+}
+}
