@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nouveau document - Weditor - Webine</title>
+<link rel="icon" type="image/png" href="https://cdn.glitch.com/c7c5feb5-1f19-4756-b398-9ea7582304e7%2Fwebine_logo_l.gif?v=1602413583604" />
+<script src="https://use.fontawesome.com/6134184fb2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://webine.webpy.ga/APIs/wodal/params.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<link href="/APIs/weditor/edt_style.css" rel="stylesheet">
+</head>
+<body>
+<noscript><div style="display:block" class="modalcss"><div class="modal-css-content"><p class="modal-title">Erreur</p><p style="color:#444444">Veuillez activer le Javascript</p><br></div></div></noscript>
+<input type="text" placeholder="Titre du document" onkeyup="document.title=this.value+' - Weditor - Webine'" oninput="if(value.length>80)value=value.slice(0,80)" class="titledoc" value="Nouveau document">
+<button onclick="openmodal('confirm-save', 'modalbtnc7')" class="edt">Nouveau</button><button onclick="openmodal('modal-docs', 'modalbtnc2')" class="edt">Documents</button><button id="savedoc" class="edt">Enregistrer</button><button aria-label="Annuler" id="text_undo" class="edt disabled"><i class="fa fa-undo" aria-hidden="true"></i></button><button aria-label="Rétablir" id="text_redo" class="edt disabled"><i class="fa fa-repeat" aria-hidden="true"></i></button><button aria-label="Imprimer" onclick="printdoc()" class="edt"><i class="fa fa-print" aria-hidden="true"></i></button><button onclick="openmodal('modal-htmlcode', 'modalbtnc4');document.querySelector('#htmlcode').value=document.querySelector('[weditor]').innerHTML" aria-label="Code HTML" class="edt gtcode"><i class="fa fa-code" aria-hidden="true"></i></button><button aria-label="Copier" onclick="action('copy')" class="edt"><i class="fa fa-clipboard" aria-hidden="true"></i></button><button aria-label="Couper" onclick="action('cut')" class="edt"><i class="fa fa-scissors" aria-hidden="true"></i></button><button aria-label="Effacer tout" onclick="openmodal('modal-confirm', 'modalbtnc1')" class="edt"><i class="fa fa-trash" aria-hidden="true"></i></button><button onclick="action('forecolor')" class="edt">Couleur du texte</button><button onclick="action('backcolor')" class="edt">Couleur de fond</button><button onclick="action('inserthorizontalrule')" class="edt">Insérer une ligne</button><button onclick="alinea()" class="edt">Alinéa</button><button aria-label="Gras" onclick="action('bold')" class="edt"><i class="fa fa-bold" aria-hidden="true"></i></button><button aria-label="Italique" onclick="action('italic')" class="edt"><i class="fa fa-italic" aria-hidden="true"></i></button><button aria-label="Souligné" onclick="action('underline')" class="edt"><i class="fa fa-underline" aria-hidden="true"></i></button><button aria-label="Barré" onclick="action('strikethrough')" class="edt"><i class="fa fa-strikethrough" aria-hidden="true"></i></button><button aria-label="Créer un lien" onclick="action('createLink')" class="edt"><i class="fa fa-link" aria-hidden="true"></i></button><button aria-label="Supprimer le lien" onclick="action('unlink')" class="edt"><i style="color:red" class="fa fa-link" aria-hidden="true"></i></button><button aria-label="Insérer une image" onclick="action('insertImage')" class="edt"><i class="fa fa-picture-o" aria-hidden="true"></i></button><button aria-label="Exposant" onclick="action('superscript')" class="edt"><i class="fa fa-superscript" aria-hidden="true"></i></button><button aria-label="Indice" onclick="action('subscript')" class="edt"><i class="fa fa-subscript" aria-hidden="true"></i></button><button aria-label="Liste à puces" onclick="action('insertunorderedlist')" class="edt"><i class="fa fa-list" aria-hidden="true"></i></button><button aria-label="Liste à chiffres" onclick="action('insertorderedlist')" class="edt"><i class="fa fa-list-ol" aria-hidden="true"></i></button><button aria-label="Justifié" onclick="action('justifyfull')" class="edt"><i class="fa fa-align-justify" aria-hidden="true"></i></button><button aria-label="Aligné à gauche" onclick="action('justifyleft')" class="edt"><i class="fa fa-align-left" aria-hidden="true"></i>
+</button><button aria-label="Centré" onclick="action('justifycenter')" class="edt"><i class="fa fa-align-center" aria-hidden="true"></i></button><button aria-label="Aligné à droite" onclick="action('justifyright')" class="edt"><i class="fa fa-align-right" aria-hidden="true"></i></button><button onclick="openmodal('modal-info', 'modalbtnc5')" aria-label="À propos de Weditor" class="edt"><i class="fa fa-info" aria-hidden="true"></i></button>
+<select class="edt" onchange="fontSize(this.value);fontSize(this.value)">
+<option value="15" style="font-size:15px" class="styleslist">Normal</option>
+<option value="40" style="font-size:40px" class="styleslist">Titre</option>
+<option value="35" style="font-size:35px" class="styleslist">Sous-titre</option>
+<option value="33" style="font-size:33px" class="styleslist">Titre 1</option>
+<option value="30" style="font-size:30px" class="styleslist">Titre 2</option>
+<option value="25" style="font-size:25px" class="styleslist">Titre 3</option>
+</select>
+<select class="edt" onchange="fontSize(this.value);fontSize(this.value)">
+<option value="12" class="styleslist">12px</option>
+<option value="14" class="styleslist">14px</option>
+<option value="16" class="styleslist">16px</option>
+<option value="18" class="styleslist">18px</option>
+<option value="20" class="styleslist">20px</option>
+<option value="22" class="styleslist">22px</option>
+<option value="24" class="styleslist">24px</option>
+<option value="26" class="styleslist">26px</option>
+<option value="28" class="styleslist">28px</option>
+<option value="30" class="styleslist">30px</option>
+</select>
+<span class="words">0</span><button aria-label="Verrouiller l'édition" onclick="addpswd()" class="lock edt"><i class="fa fa-lock" aria-hidden="true"></i></button><button onclick="openmodal('modal-signature', 'modalbtnc6')" class="edt signature">Ajouter une signature</button><button class="edt" onclick="searchdictionary()">Définition</button>
+<div contenteditable weditor></div>
+<a draggable="false" class="mini-link" target="_blank" href="https://webine.webpy.ga/APIs/weditor">Weditor</a> <a draggable="false" class="mini-link" onclick="javascript:window.open('https://webine.webpy.ga/report#product=Webine&doc_data='+editor.innerText)">Signaler un bug</a>
+<div id="modal-confirm" class="modalcss">
+  <div class="modal-css-content">
+    <p class="modal-title">Êtes-vous sûr ? Cette action est irréversible.</p>
+    <button id="modalbtnc1" class="confirm-btn cancel">Annuler</button>
+    <button onclick="confirmdelete()" class="confirm-btn delete">Supprimer</button>
+  </div>
+</div>
+<div id="modal-docs" class="modalcss">
+  <div class="modal-css-content">
+    <p class="modal-title">Documents</p>
+    <p class="des_resize" style="color:#444444">Ouvrir un/plusieurs versions d'un document enregistré</p>
+    <div id="docsList"></div>
+    <br>
+    <button id="modalbtnc2" class="confirm-btn close">Fermer</button>
+  </div>
+</div>
+<div id="modal-color" class="modalcss">
+  <div class="modal-css-content">
+    <p class="modal-title">Couleur</p>
+    <button onclick="setcolor('#17a2b8')" style="background-color:#17a2b8" class="colorbtn"></button><button onclick="setcolor('#d7f500')" style="background-color:#d7f500" class="colorbtn"></button><button onclick="setcolor('#43b581')" style="background-color:#43b581" class="colorbtn"></button><button onclick="setcolor('#9FE7E2')" style="background-color:#9FE7E2" class="colorbtn"></button><button onclick="setcolor('#68BCD0')" style="background-color:#68BCD0" class="colorbtn"></button><button onclick="setcolor('#E19879')" style="background-color:#E19879" class="colorbtn"></button><button onclick="setcolor('#F6D5BF')" style="background-color:#F6D5BF" class="colorbtn"></button><button onclick="setcolor('#F6BD0E')" style="background-color:#F6BD0E" class="colorbtn"></button><button onclick="setcolor('#E0BBE4')" style="background-color:#E0BBE4" class="colorbtn"></button><button onclick="setcolor('#D291BC')" style="background-color:#D291BC" class="colorbtn"></button><button onclick="setcolor('#FEC8D8')" style="background-color:#FEC8D8" class="colorbtn"></button><button onclick="setcolor('#FFDFD3')" style="background-color:#FFDFD3" class="colorbtn"></button><button onclick="setcolor('#1F684A')" style="background-color:#1F684A" class="colorbtn"></button><button onclick="setcolor('#EA4335')" style="background-color:#EA4335" class="colorbtn"></button><button onclick="setcolor('#8E1E2E')" style="background-color:#8E1E2E" class="colorbtn"></button><button onclick="setcolor('#EAE3C6')" style="background-color:#EAE3C6" class="colorbtn"></button><button onclick="setcolor('#FF3939')" style="background-color:#FF3939" class="colorbtn"></button><button onclick="setcolor('#11CAFF')" style="background-color:#11CAFF" class="colorbtn"></button><button onclick="setcolor('#2C91BC')" style="background-color:#2C91BC" class="colorbtn"></button><button onclick="setcolor('#ECC43E')" style="background-color:#ECC43E" class="colorbtn"></button><button onclick="setcolor('#E69900')" style="background-color:#E69900" class="colorbtn"></button><button onclick="setcolor('#154CA1')" style="background-color:#154CA1" class="colorbtn"></button><button onclick="setcolor('#143787')" style="background-color:#143787" class="colorbtn"></button><button onclick="setcolor('#143787')" style="background-color:#143787" class="colorbtn"></button><button onclick="setcolor('#DDAE80')" style="background-color:#DDAE80" class="colorbtn"></button><button onclick="setcolor('#76464A')" style="background-color:#76464A" class="colorbtn"></button><button onclick="setcolor('#AD5B50')" style="background-color:#AD5B50" class="colorbtn"></button><button onclick="setcolor('#000000')" style="background-color:#000000" class="colorbtn"></button><button onclick="setcolor('#ffffff')" style="background-color:#ffffff;border: 1px solid #f2f2f2" class="colorbtn"></button>
+    <br><br>
+    <input class="inputcolor" type="color">
+    <br><br>
+    <button id="modalbtnc3" class="confirm-btn close">Fermer</button>
+  </div>
+</div>
+<div id="modal-htmlcode" class="modalcss">
+  <div class="modal-css-content">
+    <p class="modal-title">Code HTML</p>
+    <textarea onclick="this.select()" onfocus="this.select()" rows="12" style="max-height: 400px" id="htmlcode" class="modalinput" readonly code></textarea>
+    <br><br>
+    <button id="modalbtnc4" class="confirm-btn close">Fermer</button>
+  </div>
+</div>
+<div id="modal-info" class="modalcss">
+  <div class="modal-css-content modal_resize">
+    <p style="display: block;width: 100%;background-color: white;padding-top: 10px;padding-bottom: 10px;position: -webkit-sticky;position: sticky;top: -20px;border-bottom: 1px solid #d2d2d2" class="modal-title sticky">À propos de Weditor</p>
+    <h4>Weditor est-il le seul éditeur de texte en ligne le plus complet ?</h4>
+    <p>Weditor est connu du fait de son accessibilité et qu'il est gratuit. Comme tous les produits Webine, tous ont un but précis : proposer des services pour faciliter la vie, le développement web ; c'est l'un des premiers engagements de notre société.</p>
+    <h4>Comment fonctionne l'enregistrement des documents ?</h4>
+    <p>Comme il n'y a pas de compte sur Weditor, pour enregistrer votre document nous utilisons les cookies plus précisément le stockage local. Votre document sera enregistré sur votre navigateur et seul vous y avez accès (uniquement sur votre navigateur actuel). Sachez que nous n'avons pas accès à vos documents.</p>
+    <h4>Développement web</h4>
+    <p>La plupart des produits Webine sont pour les développeurs de sites web. Sur weditor vous avez la possibilité d'obtenir de code HTML de votre document.</p>
+    <h4>Documents</h4>
+    <p>Tous vos documents enregistrés sont accessibles en cliquant sur "Documents". Cliquez sur "Supprimer" pour supprimer un document.</p>
+    <h4>Verrouillage de l'édition</h4>
+    <p>Vous avez la possibilité de verrouiller l'édition des documents avec un mot de passe. La première fois, un mot de passe temporaire vous sera demandé. Lors du déverrouillage, le mot de passe serat réinitialisé. En cas d'oubli du mot de passe il est facile de le récupérer. en nous contactant <a href="">ici.</a></p>
+    <a style="text-decoration:none;color:black" href="https://webine.webpy.ga/support">
+    <table>
+    <tr>
+    <th><img draggable="false" width="250px" src="https://cdn.glitch.com/c7c5feb5-1f19-4756-b398-9ea7582304e7%2F6b77404dd7ecde32da39f8a7c3ba4aa7.jpg?v=1603214305936"></th>
+    <th style="font-weight:normal">Besoin d'aide ? Nous sommes la pour vous aider.</th>
+    </tr>
+    </table>
+    </a>
+    <button onclick="localStorage.clear();alert('Le stockage a bien été réinitialisé')" class="confirm-btn delete">Réinitialiser le stockage</button>
+    <br><br>
+    <button id="modalbtnc5" class="confirm-btn close">Fermer</button>
+  </div>
+</div>
+<div id="modal-signature" class="modalcss">
+  <div class="modal-css-content">
+    <p class="modal-title">Ajouter une signature</p>
+    <p class="des_resize" style="color:#444444">Ajoutez une signature qui s'ajoutera automatiquement à la fin de vos documents.</p>
+    <input id="signature" class="modalinput" name="signature" type="text">
+    <br><br>
+    <button id="modalbtnc6" class="confirm-btn cancel">Annuler</button>
+    <button onclick="addsignature()" class="confirm-btn close">Enregistrer</button>
+    <button onclick="localStorage.removeItem('signature');alert('La signature a bien été supprimée');document.querySelector('#signature').value=''" class="confirm-btn delete">Supprimer la signature</button>
+  </div>
+</div>
+  
+<div id="confirm-save" class="modalcss">
+  <div class="modal-css-content">
+    <p class="modal-title">Enregistrer les modifications ?</p>
+    <button id="modalbtnc7" class="confirm-btn cancel">Annuler</button>
+    <button onclick="confirmsavedoc()" class="confirm-btn close">Oui</button>
+    <button onclick="confirmdelete();document.querySelector('#confirm-save').style.display='none'" class="confirm-btn delete">Non</button>
+  </div>
+</div>
+  
+<script>
+function action(nom, argument) {
+  if (typeof argument === 'undefined') {
+  argument = '';
+  }
+  switch (nom) {
+     case "createLink":
+    argument = prompt("Adresse du lien");
+     break;
+     case "insertImage":
+    argument = prompt("URL de l'image");
+     break;
+     case "forecolor":
+    openmodal('modal-color', 'modalbtnc3');
+    argument = document.querySelector(".inputcolor").value;
+     break;
+     case "backcolor":
+    openmodal('modal-color', 'modalbtnc3');
+    argument = document.querySelector(".inputcolor").value;
+     break;
+  }
+  editor.focus();
+  document.execCommand(nom, false, argument);
+  editor.focus();
+}
+  
+function alinea() {
+  editor.innerHTML = "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0";
+}
+
+var editor = document.querySelector("[weditor]");
+var title = document.querySelector(".titledoc");
+var saveBtn = document.querySelector("#savedoc");
+var docsList = document.querySelector("#docsList");
+  
+function setcolor(color) {
+  document.querySelector(".inputcolor").value = color;
+  document.querySelector("#modal-color").style.display = "none";
+}
+  
+function printdoc() {
+   var printContents = "<h1 style='font-family: Arial, sans-serif;'>" + title.value + "</h1>" +  "<p style='font-family: Arial, sans-serif !important'>" + editor.innerHTML + "</p>";
+   var originalContents = document.body.innerHTML;
+   document.body.innerHTML = printContents; 
+   window.print();  
+   document.body.innerHTML = originalContents;
+   }
+ 
+if (localStorage.getItem("titledoc")) {
+  title.value = localStorage.getItem("titledoc");
+  document.title = localStorage.getItem("titledoc") + " - Weditor - Webine";
+}
+ 
+if (localStorage.getItem("doc")) {
+  editor.innerHTML = localStorage.getItem("doc");
+}
+  
+if (localStorage.getItem("docsList")) {
+  docsList.innerHTML = localStorage.getItem("docsList");
+  var x, i;
+  x = document.querySelectorAll(".dlist");
+  for (i = 0; i < x.length; i++) {
+    x[i].onclick = function () {
+     editor.innerHTML = this.getAttribute('docdata');
+     title.value = this.getAttribute('doctitle');
+     document.title = this.getAttribute('doctitle') + " - Weditor - Webine";
+     document.querySelector("#modal-docs").style.display = "none";
+    }
+  }
+  var x2, i2;
+  x2 = document.querySelectorAll(".dltdocs");
+  for (i2 = 0; i2 < x2.length; i2++) {
+    x2[i2].addEventListener("click", function () {this.parentElement.remove(); localStorage.setItem("docsList", docsList.innerHTML);});
+  }
+}
+  
+saveBtn.addEventListener("click", function() {
+  if(title.value == "" || title.value == null) {
+    title.value = "Nouveau document";
+    localStorage.setItem("titledoc", "Nouveau document");
+  } else {
+    localStorage.setItem("titledoc", title.value);
+  }
+  localStorage.setItem("doc", editor.innerHTML);
+  document.title = localStorage.getItem("titledoc") + " - Weditor - Webine";
+  saveBtn.innerHTML = "Enregistré";
+  saveBtn.className = "edt saved";
+  setTimeout(function(){saveBtn.className="edt";saveBtn.innerHTML="Enregistrer";}, 1000);
+  var e = document.createElement("div");
+  var e2 = document.createElement("span");
+  var e3 = document.createElement("span");
+  e.className = "dlist";
+  e2.className = "datedocs";
+  e3.className = "dltdocs";
+  e.setAttribute("doctitle", title.value);
+  e.setAttribute("docdata", editor.innerHTML);
+  e.addEventListener("click", function () {editor.innerHTML = this.getAttribute('docdata'); title.value = this.getAttribute('doctitle'); document.title = this.getAttribute('doctitle') + " - Weditor - Webine";document.querySelector("#modal-docs").style.display = "none";});
+  e3.onclick = function () {this.parentElement.remove(); localStorage.setItem("docsList", docsList.innerHTML);};
+  const dnf = new Date();
+  const ye = new Intl.DateTimeFormat('fr', { year: 'numeric' }).format(dnf);
+  const mo = new Intl.DateTimeFormat('fr', { month: 'short' }).format(dnf);
+  const da = new Intl.DateTimeFormat('fr', { day: '2-digit' }).format(dnf);
+  var hour = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
+  var d = da + "\u00a0" + mo + "\u00a0" + ye + "\u00a0" + hour;
+  var h = document.createTextNode(title.value);
+  var h2 = document.createTextNode(d);
+  var h3 = document.createTextNode("Supprimer");
+  e.appendChild(h);
+  e.appendChild(e3);
+  e.appendChild(e2);
+  e2.appendChild(h2);
+  e3.appendChild(h3);
+  docsList.appendChild(e);
+  localStorage.setItem("docsList", docsList.innerHTML);
+});
+  
+function confirmsavedoc() {
+  saveBtn.click();
+  document.title = "Nouveau document - Weditor - Webine";
+  title.value = "";
+  editor.innerHTML = "";
+}
+  
+function confirmdelete() {
+  localStorage.removeItem('titledoc');
+  localStorage.removeItem('doc');
+  title.value = "Nouveau document";
+  editor.innerHTML = "";
+  document.querySelector("#modal-confirm").style.display = "none";
+  document.title = "Nouveau document - Weditor - Webine";
+}
+  
+function fontSize(size) {
+    var sel = document.getSelection();
+
+    var selectedHtml = "";
+    if (sel.rangeCount) {
+        var container = document.createElement("div");
+        for (var i = 0, len = sel.rangeCount; i < len; ++i) {
+            container.appendChild(sel.getRangeAt(i).cloneContents());
+        }
+        const children = container.getElementsByTagName("*")
+        for(let child of children) {
+            if(child.style.fontSize) {
+                child.style.fontSize = `${size}px`
+            }
+        }
+        selectedHtml = container.innerHTML;
+    }
+
+    let html = `<div style="font-size: ${size}px;">${selectedHtml}</div>`
+    document.execCommand('insertHTML', false, html);
+}
+    canvas_history=[];
+    s_history=true;
+    cur_history_index=0; 
+    DEBUG=true;
+
+function save_history(force){
+    if(cur_history_index<canvas_history.length-1){
+        canvas_history=canvas_history.slice(0,cur_history_index+1);
+        cur_history_index++;
+        jQuery('#text_redo').addClass("disabled");
+    }
+    var cur_canvas=JSON.stringify(jQuery(editor).html());
+    if(cur_canvas!=canvas_history[cur_history_index] || force==1){
+        canvas_history.push(cur_canvas);
+        cur_history_index=canvas_history.length-1;
+    }
+    
+    DEBUG && console.log('saved '+canvas_history.length+" "+cur_history_index);
+    
+    jQuery('#text_undo').removeClass("disabled");        
+}
+
+
+function history_undo() {
+  if(cur_history_index>0) {
+   s_history=false;
+   canv_data=JSON.parse(canvas_history[cur_history_index-1]);
+   jQuery(editor).html(canv_data);
+   cur_history_index--;
+   DEBUG && console.log('undo '+canvas_history.length+" "+cur_history_index);
+   jQuery('#text_redo').removeClass("disabled");
+} else{
+   jQuery('#text_undo').addClass("disabled");
+}
+}
+
+function history_redo() {
+  if (canvas_history[cur_history_index+1]) {
+   s_history=false;
+   canv_data=JSON.parse(canvas_history[cur_history_index+1]);       
+   jQuery(editor).html(canv_data);
+   cur_history_index++;
+   DEBUG && console.log('redo '+canvas_history.length+" "+cur_history_index); 
+   jQuery('#text_undo').removeClass("disabled"); 
+} else {
+   jQuery('#text_redo').addClass("disabled");         
+} 
+}
+jQuery('body').keydown(function(e){
+    save_history();
+});
+jQuery('#text_undo').click(function(e){
+    history_undo();
+});
+jQuery('#text_redo').click(function(e){
+    history_redo();
+});
+  
+editor.addEventListener('input', function () {
+    var countThis = this.textContent,
+    count = countThis.trim().replace(/\s+/g, ' ').split(' ').length;
+    document.querySelector('.words').textContent = count;
+});
+  
+document.querySelector("body").addEventListener('mouseover', function () {
+    var countThis = editor.textContent,
+    count = countThis.trim().replace(/\s+/g, ' ').split(' ').length;
+    document.querySelector('.words').textContent = count;
+});
+  
+if (localStorage.getItem("pass")) {
+  title.setAttribute("readonly", "");
+  editor.contentEditable = "false";
+  editor.style.cursor = "not-allowed";
+  title.style.cursor = "not-allowed";
+  document.querySelector(".lock").style.color = "red";
+  document.querySelector(".lock").ariaLabel = "Deverrouiller l'édition";
+}
+
+function addpswd() {
+if (localStorage.getItem("pass")) {
+  title.setAttribute("readonly", "");
+  editor.contentEditable = "false";
+  editor.style.cursor = "not-allowed";
+  title.style.cursor = "not-allowed";
+  document.querySelector(".lock").style.color = "red";
+  document.querySelector(".lock").ariaLabel = "Deverrouiller l'édition";
+  var pass = prompt('Mot de passe requis');
+  if (pass == localStorage.getItem("pass")) {
+    title.removeAttribute("readonly");
+    editor.contentEditable = "true";
+    editor.style.cursor = "";
+    title.style.cursor = "";
+    document.querySelector(".lock").style.color = "black";
+    document.querySelector(".lock").ariaLabel = "Verrouiller l'édition";
+    localStorage.removeItem('pass');
+  } else {
+    alert("Mot de passe incorrect !");
+    editor.contentEditable = "false";
+  }
+} else {
+  title.setAttribute("readonly", "");
+  editor.contentEditable = "false";
+  var spass = prompt('Ajoutez un mot de passe temporaire')
+  if (spass != null) {
+  localStorage.setItem("pass",spass);
+  editor.style.cursor = "not-allowed";
+  title.style.cursor = "not-allowed";
+  document.querySelector(".lock").style.color = "red";
+  document.querySelector(".lock").ariaLabel = "Deverrouiller l'édition";
+  } else {
+  alert("Veuillez entrer un mot de passe !");
+  }
+}
+}
+  
+var keys = {};
+onkeydown = onkeyup = function (e) {
+    e = e || event;
+    e.which = e.which || e.keyCode;
+    keys[e.which] = e.type === 'keydown';
+    if (keys[17] && keys[18] && keys[80]) {
+      localStorage.removeItem('pass');
+      window.location.reload();
+    }
+}
+  
+function addsignature() {
+  var signature = document.querySelector("#signature").value;
+  localStorage.setItem("signature",signature);
+  document.querySelector("#modal-signature").style.display = "none";
+}
+
+if (localStorage.getItem("signature")) {
+  var editorhtml = editor.innerHTML;
+  document.querySelector("button.signature").innerHTML = "Signature";
+  document.querySelector("#signature").value = localStorage.getItem("signature");
+  editor.innerHTML = editorhtml + "<br>" + "<hr>" + "<font color='#9b9595'>" + localStorage.getItem("signature") + "</font>";
+}
+  
+function searchdictionary() {
+  if (document.getSelection() != "") {
+    window.open("https://www.larousse.fr/dictionnaires/francais/"+document.getSelection());
+  }
+}
+</script>
+</body>
+</html>
+
