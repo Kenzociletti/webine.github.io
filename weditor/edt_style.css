@@ -256,6 +256,7 @@ textarea[code] {
   border-radius: 4px;
   color: white;
   font-size: 15px;
+  font-family: 'Nunito', Arial, sans-serif;
   padding: 10px 15px;
   cursor: pointer;
   outline: none;
