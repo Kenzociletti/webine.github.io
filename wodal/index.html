@@ -125,5 +125,10 @@ Contenu&nbsp;de&nbsp;la&nbsp;modal&nbsp;2<br/>
   <p>© 2020 Webine</p>
 </div>
 
+<script>
+if (location.protocol !== 'https:') {
+    location.replace(`https:${location.href.substring(location.protocol.length)}`);
+}
+</script>
 </body>
 </html>
