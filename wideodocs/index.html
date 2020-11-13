@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <title>Wideo - Webine</title>
   <meta charset="utf-8">
@@ -101,11 +101,11 @@
 
 <script>
 function preview() {
-location.href = "https://webine.webpy.ga/wideo/?pvu=" + document.querySelector("#input_3").value  + "#input_3";
+location.href = "https://www.webine.ga/wideodocs/?pvu=" + document.querySelector("#input_3").value  + "#input_3";
 }
   
 var pvu = window.location.href.match(/\?pvu=(.*)/);
-document.querySelector("#vidpreview").src = "https://webine.webpy.ga/APIs/exemple/wideoAd/?pvu=" + pvu[1];
+document.querySelector("#vidpreview").src = "https://www.webine.ga/wideo/exemple?pvu=" + pvu[1];
 document.querySelector("#input_3").value = pvu[1];
 </script>
 </body>
