@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/6134184fb2.js"></script>
+    <link rel="stylesheet" href="https://webine.webpy.ga/public/APIs/wideo/styles.css">
+  </head>  
+  <body>
+
+    <div class="player">
+     <video class="player__video ad" src="null"></video>
+      <img title="Lire" class="play__button" src="https://cdn.glitch.com/5ca1968a-d6a8-4e14-8bfc-1829566a2cd0%2Fplay-button%20(2).svg?v=1602341113477">
+      <p class="ad__info"><span class="ad__info_pub">Publicité </span> Non sponsorisé. AUCUN revenu n'a été demandé en échange de cette publicité. <a style="cursor:not-allowed">Ajouter ma publicité gratuitement</a></p>
+      <button style="cursor:not-allowed" class="skip_ad_btn">Ignorer l'annonce</button>
+      <div class="progress_ad">
+        <div class="progress__filled_ad"></div>
+       </div>
+   </div>
+
+<script> 
+const player = document.querySelector('.player');
+const ad = player.querySelector('.ad');
+const progressBarAd = player.querySelector('.progress__filled_ad');
+
+function viewAd() {
+  player.querySelector(".play__button").addEventListener('click', function () {ad.play();document.querySelector(".play__button").style.display='none';setTimeout(function(){player.querySelector(".skip_ad_btn").style.display = "block";}, 5000);});
+}
+onload=viewAd;
+  
+ad.addEventListener("ended",function() {
+  document.querySelector(".play__button").style.display = "block";
+  document.querySelector(".skip_ad_btn").style.display = "none";
+  viewAd();
+});
+  
+function handleProgress() {
+const percentad = (ad.currentTime / ad.duration) * 100;
+progressBarAd.style.flexBasis = `${percentad}%`;
+};
+  
+ad.addEventListener('timeupdate', handleProgress);
+
+function disableselect(e){ 
+return false 
+} 
+
+function reEnable(){ 
+return true
+} 
+
+document.onselectstart=new Function ("return false") 
+document.oncontextmenu=new Function ("return false") 
+
+if (window.sidebar){ 
+document.onmousedown=disableselect 
+document.onclick=reEnable 
+} 
+  
+var pvu = window.location.href.match(/\?pvu=(.*)/);
+document.querySelector(".ad").src = pvu[1];
+</script>
+  </body>
+</html>
