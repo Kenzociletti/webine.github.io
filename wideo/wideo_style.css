@@ -106,7 +106,7 @@ body {
   display: none;
   z-index: 99;
   position: absolute;
-  bottom: 50px;
+  bottom: 45px;
   right: 0px;
   padding: 10px 15px;
   font-size: 18px;
@@ -117,7 +117,6 @@ body {
   outline: 0;
   cursor: pointer;
   opacity: 0.8;
-  transition: 0.1s;
 }
 
 .skip_ad_btn:hover {
