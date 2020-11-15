@@ -55,6 +55,10 @@ function random(array) {
 }
 ad.src = random(dataAd);
 
+if(ad.src == "https://cdn.glitch.com/5ca1968a-d6a8-4e14-8bfc-1829566a2cd0%2Fvoici-liphone-12-apple.mp4?v=1602692425115") {
+ alert("apple");
+}
+
 function viewAd() {
   player.querySelector(".play__button").addEventListener('click', function () {ad.play();document.querySelector(".play__button").style.display='none';setTimeout(function(){player.querySelector(".skip_ad_btn").style.display = "block";}, 5000);});
   player.querySelector(".player__controls").style.display = "none";
