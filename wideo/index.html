@@ -95,6 +95,7 @@ player.querySelector(".skip_ad_btn").onclick = function () {
   ad.style.display = "none";
   player.querySelector(".progress_ad").style.display = "none";
   document.querySelector(".ad__info").style.display = "none";
+  document.querySelector(".campaign__info").style.display = "none";
   player.querySelector(".skip_ad_btn").style.display = "none";
   video.style.display = "block";
   player.querySelector(".player__controls").style.display = "";
@@ -104,6 +105,7 @@ player.querySelector(".skip_ad_btn").onclick = function () {
 ad.addEventListener("ended",function() {
   ad.style.display = "none";
   document.querySelector(".ad__info").style.display = "none";
+  document.querySelector(".campaign__info").style.display = "none";
   player.querySelector(".progress_ad").style.display = "none";
   player.querySelector(".skip_ad_btn").style.display = "none";
   video.style.display = "block";
