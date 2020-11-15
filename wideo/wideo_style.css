@@ -124,6 +124,12 @@ body {
   border: 1px solid #f2f2f2;
 }
 
+
+.skip_ad_btn:after {
+  width: 20px;
+  content: url('https://cdn.glitch.com/5ca1968a-d6a8-4e14-8bfc-1829566a2cd0%2Fskip.svg?v=1605444072313');
+}
+
 .player__item_fb {
   background: none;
   border: 0;
