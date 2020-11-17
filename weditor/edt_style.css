@@ -78,6 +78,11 @@ div[weditor] {
   outline: 0;
 }
 
+div[weditor]:-webkit-full-screen {
+  padding: 40px;
+  cursor: default !important;
+}
+
 textarea[code] {
   resize: none;
 }
