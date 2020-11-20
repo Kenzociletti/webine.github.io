@@ -14,10 +14,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  min-height: 100vh;
   background-size: cover;
-  align-items: center;
-  justify-content: center;
 }
 
 .play__button {
@@ -65,8 +62,8 @@ body {
 }
 
 .player {
-  max-width: 750px;
-  min-width: 700px;
+  width: 100%;
+  height: 100%;
   border: 4px solid #343a40;
   position: relative;
   font-size: 0;
@@ -186,7 +183,8 @@ body {
   transition: all 0.3s;
   flex-wrap: wrap;
   background: white;
-  filter:alpha(opacity=50); opacity:0.9;
+  filter: alpha(opacity=50);
+  opacity: 0.9;
   transition: 0.2s;
 }
 
