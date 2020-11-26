@@ -65,7 +65,7 @@
 
 #text_undo.disabled,#text_redo.disabled{
   color: #ccc;
-  }
+}
 
 div[weditor] {
   height: 480px;
