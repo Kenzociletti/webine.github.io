@@ -53,18 +53,15 @@ body {
 .ad__info_type {
   padding: 2px;
   border-radius: 3px;
-}
-
-.bg_orange {
   background-color: orange;
 }
 
 .bg_blue {
-  background-color: blue;
+  background-color: blue !important;
 }
 
 .bg_green {
-  background-color: green;
+  background-color: green !important;
 }
 
 .campaign__info {
