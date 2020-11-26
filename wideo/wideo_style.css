@@ -51,7 +51,7 @@ body {
 }
 
 .ad__info_type {
-  padding: 2px;
+  padding: 2px 5px;
   border-radius: 3px;
   background-color: orange;
 }
