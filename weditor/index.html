@@ -160,6 +160,7 @@ function alinea() {
   var alinea = document.createElement("p");
   alinea.appendChild(alineatxt);
   var alineatxt = document.createTextNode("\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0");
+  editor.appendChild(alinea);
 }
 
 var editor = document.querySelector("[weditor]");
@@ -398,7 +399,7 @@ if (localStorage.getItem("pass")) {
   } else {
   alert("Veuillez entrer un mot de passe !");
   title.removeAttribute("readonly");
-  editor.contentEditable = "";
+  editor.contentEditable = "true";
   }
 }
 }
