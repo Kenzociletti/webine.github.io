@@ -110,6 +110,11 @@ body {
 
 .player__video {
   width: 100%;
+  pointer-events: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+    display: none;
 }
 
 .viewer {
