@@ -118,6 +118,7 @@ textarea[code] {
   display: block;
   border: 1px solid #ffddab;
   background-color: #ffe6c0;
+  border-radius: 4px;
   font-family: Arial, sans-serif !important;
   color: black !important;
   text-decoration: none !important;
@@ -147,6 +148,7 @@ textarea[code] {
 .dltdocs {
   font-family: Arial, sans-serif !important;
   padding: 5px;
+  border-radius: 4px;
   background-color: red;
   color: white;
   margin: 0;
@@ -203,7 +205,7 @@ textarea[code] {
   transform: translate(-50%, -50%);
   background-color: #fefefe;
   padding: 20px;
-  border: 1px solid #d2d2d2;
+  border: none;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
