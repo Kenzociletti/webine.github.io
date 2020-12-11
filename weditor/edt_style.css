@@ -102,7 +102,7 @@ textarea[code] {
   -khtml-user-select: none !important;
   -moz-user-select: none !important;
   -ms-user-select: none !important;
-  user-select: none !importants
+  user-select: none !important;
 }
 
 .inputcolor {
@@ -118,7 +118,6 @@ textarea[code] {
   display: block;
   border: 1px solid #ffddab;
   background-color: #ffe6c0;
-  border-radius: 4px;
   font-family: Arial, sans-serif !important;
   color: black !important;
   text-decoration: none !important;
@@ -138,7 +137,6 @@ textarea[code] {
   font-family: Arial, sans-serif !important;
   color: #43b581;
   font-size: 12px;
-  float: right;
 }
   
 .datedocs:after {
@@ -151,9 +149,7 @@ textarea[code] {
   border-radius: 4px;
   background-color: red;
   color: white;
-  margin: 0;
   font-size: 12px;
-  float: right;
 }
   
 .dltdocs:hover {
