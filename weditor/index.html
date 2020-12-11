@@ -212,7 +212,7 @@ if (localStorage.getItem("docsList")) {
   
 saveBtn.addEventListener("click", function() {
   if(title.value == "" || title.value == null) {
-    title.value = "Nouveau document";
+    title.value = "Document sans titre";
     localStorage.setItem("titledoc", "Nouveau document");
   } else {
     localStorage.setItem("titledoc", title.value);
@@ -236,14 +236,15 @@ saveBtn.addEventListener("click", function() {
   const ye = new Intl.DateTimeFormat('fr', { year: 'numeric' }).format(dnf);
   const mo = new Intl.DateTimeFormat('fr', { month: 'short' }).format(dnf);
   const da = new Intl.DateTimeFormat('fr', { day: '2-digit' }).format(dnf);
-  var hour = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
-  var d = da + "\u00a0" + mo + "\u00a0" + ye + "\u00a0" + hour;
+  var hnf = new Date();
+  var hour = hnf.toLocaleTimeString([], {timeStyle: 'short'});
+  var d = "\u00a0" + da + "\u00a0" + mo + "\u00a0" + ye + "\u00a0" + hour;
   var h = document.createTextNode(title.value);
   var h2 = document.createTextNode(d);
   var h3 = document.createTextNode("Supprimer");
   e.appendChild(h);
-  e.appendChild(e3);
   e.appendChild(e2);
+  e.appendChild(e3);
   e2.appendChild(h2);
   e3.appendChild(h3);
   docsList.appendChild(e);
@@ -268,7 +269,6 @@ function confirmdelete() {
   
 function fontSize(size) {
     var sel = document.getSelection();
-
     var selectedHtml = "";
     if (sel.rangeCount) {
         var container = document.createElement("div");
@@ -305,7 +305,6 @@ function save_history(force){
     }
     
     DEBUG && console.log('saved '+canvas_history.length+" "+cur_history_index);
-    
     jQuery('#text_undo').removeClass("disabled");        
 }
 
