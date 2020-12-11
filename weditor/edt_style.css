@@ -171,7 +171,7 @@ textarea[code] {
   
 .modalinput {
   width: 100%;
-  padding: 11px;
+  padding: 10px;
   font-size: 14px;
   border: 2px solid #f5b512;
   border-radius: 4px;
@@ -287,7 +287,7 @@ textarea[code] {
   opacity: 0.8;
   transition-duration: 0.3s;
   content: '\000020';
-  margin-bottom: 5px;
+  margin: 2px;
 }
   
 .colorbtn:hover {
