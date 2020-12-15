@@ -220,6 +220,7 @@ saveBtn.addEventListener("click", function() {
   }
   localStorage.setItem("doc", editor.innerHTML);
   document.title = localStorage.getItem("titledoc") + " - Weditor - Webine";
+  sb("Enregistrement...");
   saveBtn.innerHTML = "Enregistré";
   saveBtn.className = "edt saved";
   setTimeout(function(){saveBtn.className="edt";saveBtn.innerHTML="Enregistrer";}, 1000);
@@ -350,7 +351,7 @@ editor.addEventListener('input', function () {
     count = countThis.trim().replace(/\s+/g, ' ').split(' ').length;
     document.querySelector('.words').textContent = count;
     if(document.querySelector('.words').innerText == "300" || document.querySelector('.words').innerText == "600") {
-    opensb('Votre texte est long ! N&#x2019;oubliez pas d&#x2019;enregistrer votre document.');
+    sb('Votre texte est long ! N&#x2019;oubliez pas d&#x2019;enregistrer votre document.');
 }
 });
   
@@ -448,11 +449,11 @@ function projectionMode() {
   }
 }
 
-function opensb(msg) {
+function sb(msg) {
   var x = document.getElementById("snackbar");
   x.innerHTML = msg;
   x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  setTimeout(function(){x.className = x.className.replace("show", ""); x.innerHTML = "";}, 3000);
 }
 </script>
 </body>
