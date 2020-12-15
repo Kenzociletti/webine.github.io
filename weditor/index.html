@@ -450,7 +450,7 @@ function projectionMode() {
 
 function opensb(msg) {
   var x = document.getElementById("snackbar");
-  x.innerText = msg;
+  x.innerHTML = msg;
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
