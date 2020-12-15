@@ -467,7 +467,7 @@ function sb(msg) {
 
 function gsl() {
   sb('URL générée avec succès');
-  document.querySelector('#shareurl').value='https://www.webine.fr/weditor/share#dt='+document.querySelector('.titledoc').value+'&dd='+editor.innerHTML;
+  document.querySelector('#shareurl').value='https://www.webine.fr/weditor/share#dt='+document.querySelector('.titledoc').value+'~dd='+editor.innerHTML;
   $("#shareurl").val($("#shareurl").val().replaceAll('\u003C', '&#60;'));
   $("#shareurl").val($("#shareurl").val().replaceAll('\u003E', '&#62;'));
   $("#shareurl").val($("#shareurl").val().replaceAll('\u0022', '&#34;'));
