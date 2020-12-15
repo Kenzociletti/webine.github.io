@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Erreur - Weditor - Webine (mode lecture)</title>
+<link rel="icon" type="image/png" href="https://www.webine.fr/favicon_webine.gif" />
+<script src="https://use.fontawesome.com/6134184fb2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js"></script>
+<script src="https://www.webine.fr/wodal/params.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<link href="https://www.webine.fr/weditor/edt_style.css" rel="stylesheet">
+<script>
+if (location.protocol !== 'https:') {
+    location.replace(`https:${location.href.substring(location.protocol.length)}`);
+}
+</script>
+</head>
+<body>
+<noscript><div style="display:block" class="modalcss"><div class="modal-css-content"><p class="modal-title">Erreur</p><p style="color:#444444">Veuillez activer le Javascript</p><br></div></div></noscript>
+<input id="dt" type="text" class="titledoc" readonly> <button aria-label="Zoom +" class="edt zoomfz plus"><i class="fa fa-search-plus" aria-hidden="true"></i></button><button aria-label="Zoom -" class="edt zoomfz minus"><i class="fa fa-search-minus" aria-hidden="true"></i></button><button aria-label="Imprimer" onclick="printdoc()" class="edt"><i class="fa fa-print" aria-hidden="true"></i></button><span class="words">0</span>
+<div id="dd" weditor></div>
+<a style="text-decoration:none;" target="_blank" href="https://www.webine.fr/weditor"><img style="margin-top:5px !important;" draggable="false" width="80px" src="https://raw.githubusercontent.com/Kenzociletti/webine.github.io/master/weditor/weditor_icon.png"></a> <a draggable="false" class="mini-link" onclick="javascript:window.open('https://www.webine.fr/?utm_source=weditor&utm_medium=link')">Webine</a> <a draggable="false" class="mini-link" onclick="javascript:window.open('https://www.webine.fr/weditor#edit_dt='+document.querySelector('.titledoc').value+'&edit_dd='+document.querySelector('[weditor]').innerHTML)">Éditer  à partir de Mon Weditor</a>
+<script>
+var hashParams = window.location.hash.substr(1).split('&');
+for(var i = 0; i < hashParams.length; i++){ 
+    var p = hashParams[i].split('='); 
+    document.getElementById(p[0]).value = decodeURIComponent(p[1]);
+    document.title = decodeURIComponent(p[1]) + " - Weditor - Webine (mode lecture)";
+} 
+
+for(var i2 = 0; i2 < hashParams.length; i2++){ 
+var p2 = hashParams[i2].split('='); 
+    document.getElementById(p2[0]).innerHTML = decodeURIComponent(p2[1]);
+}
+
+$(function () {
+$(".zoomfz").bind("click", function () {
+var size = parseInt($('[weditor]').css("font-size"));
+if ($(this).hasClass("plus")) {
+  size = size + 2;
+} else {
+  size = size - 2;
+if (size <= 10) {
+  size = 10;
+}
+}
+$('[weditor]').css("font-size", size);
+  });
+});
+        
+function printdoc() {
+var printContents = "<h1 style='font-family: Arial, sans-serif;'>" + document.querySelector(".titledoc").value + "</h1>" +  "<p style='font-family: Arial, sans-serif !important'>" + document.querySelector("[weditor]").innerHTML + "</p>";
+var originalContents = document.body.innerHTML;
+document.body.innerHTML = printContents; 
+window.print();  
+document.body.innerHTML = originalContents;
+}
+
+document.querySelector("body").addEventListener('mouseover', function () {
+var countThis = document.querySelector("[weditor]").textContent,
+count = countThis.trim().replace(/\s+/g, ' ').split(' ').length;  document.querySelector('.words').textContent = count;
+});
+</script>
+</body>
+</html>
