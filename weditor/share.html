@@ -21,7 +21,7 @@ if (location.protocol !== 'https:') {
 <div id="dd" weditor></div>
 <a style="text-decoration:none;" target="_blank" href="https://www.webine.fr/weditor"><img style="margin-top:5px !important;" draggable="false" width="80px" src="https://raw.githubusercontent.com/Kenzociletti/webine.github.io/master/weditor/weditor_icon.png"></a> <a draggable="false" class="mini-link" onclick="javascript:window.open('https://www.webine.fr/?utm_source=weditor&utm_medium=link')">Webine</a> <a draggable="false" class="mini-link" onclick="javascript:window.open('https://www.webine.fr/weditor#edit_dt='+document.querySelector('.titledoc').value+'&edit_dd='+document.querySelector('[weditor]').innerHTML)">Éditer  à partir de Mon Weditor</a>
 <script>
-var hashParams = window.location.hash.substr(1).split('&');
+var hashParams = window.location.hash.substr(1).split('~');
 for(var i = 0; i < hashParams.length; i++){ 
     var p = hashParams[i].split('='); 
     document.getElementById(p[0]).value = decodeURIComponent(p[1]);
