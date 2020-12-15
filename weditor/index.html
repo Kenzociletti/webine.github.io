@@ -41,7 +41,7 @@ if (location.protocol !== 'https:') {
 <option value="28" class="styleslist">28px</option>
 <option value="30" class="styleslist">30px</option>
 </select>
-<span class="words">0</span><button aria-label="Verrouiller l'édition" onclick="addpswd()" class="lock edt"><i class="fa fa-lock" aria-hidden="true"></i></button><button onclick="openmodal('modal-signature', 'modalbtnc6')" class="edt signature">Ajouter une signature</button><button class="edt" onclick="searchdictionary()">Définition</button><button class="edt" onclick="projectionMode()">Mode projection</button><button class="edt" onclick="sb('Veuillez patienter...');document.querySelector('#shareurl').value='https://www.webine.fr/weditor/share#dt='+document.querySelector('.titledoc').value+'&dd='+editor.innerHTML;document.querySelector('#shareurl').value.replace(/</g, '%3C');openmodal('modal-share', 'modalbtnc8')">Partager</button>
+<span class="words">0</span><button aria-label="Verrouiller l'édition" onclick="addpswd()" class="lock edt"><i class="fa fa-lock" aria-hidden="true"></i></button><button onclick="openmodal('modal-signature', 'modalbtnc6')" class="edt signature">Ajouter une signature</button><button class="edt" onclick="searchdictionary()">Définition</button><button class="edt" onclick="projectionMode()">Mode projection</button><button class="edt" onclick="gsl()">Partager</button>
 <div contenteditable weditor></div>
 <a style="text-decoration:none;" target="_blank" href="https://www.webine.fr/weditor"><img style="margin-top:5px !important;" draggable="false" width="80px" src="https://raw.githubusercontent.com/Kenzociletti/webine.github.io/master/weditor/weditor_icon.png"></a> <a draggable="false" class="mini-link" onclick="javascript:window.open('https://www.webine.fr/?utm_source=weditor&utm_medium=link')">Webine</a> <a draggable="false" class="mini-link" onclick="javascript:window.open('https://www.webine.fr/report#product=Webine&doc_data='+editor.innerText)">Signaler une erreur</a>
 <div id="modal-confirm" class="modalcss">
@@ -463,6 +463,14 @@ function sb(msg) {
   x.innerHTML = msg;
   x.className = "show";
   setTimeout(function(){x.className = x.className.replace("show", ""); x.innerHTML = "";}, 3000);
+}
+
+function gsl() {
+  sb('URL générée avec succès');
+  document.querySelector('#shareurl').value='https://www.webine.fr/weditor/share#dt='+document.querySelector('.titledoc').value+'&dd='+editor.innerHTML;
+  $("#shareurl").val($("#shareurl").val().replaceAll('<', '%3C'));
+  $("#shareurl").val($("#shareurl").val().replaceAll('>', '%3E'));
+  openmodal('modal-share', 'modalbtnc8');
 }
 </script>
 </body>
