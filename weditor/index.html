@@ -16,7 +16,6 @@ if (location.protocol !== 'https:') {
 </script>
 </head>
 <body>
-<button onclick="genPDF()">Gen PDF<button>
 <noscript><div style="display:block" class="modalcss"><div class="modal-css-content"><p class="modal-title">Erreur</p><p style="color:#444444">Veuillez activer le Javascript</p><br></div></div></noscript>
 <div id="snackbar"></div>
 <input type="text" placeholder="Titre du document" onkeyup="document.title=this.value+' - Weditor - Webine'" oninput="if(value.length>80)value=value.slice(0,80)" class="titledoc" value="Nouveau document">
@@ -456,12 +455,6 @@ function sb(msg) {
   x.innerHTML = msg;
   x.className = "show";
   setTimeout(function(){x.className = x.className.replace("show", ""); x.innerHTML = "";}, 3000);
-}
-
-function genPDF() {
-  var doc = new jsPDF()
-  doc.text('Hello world!', 10, 10)
-  doc.save('a4.pdf')
 }
 </script>
 </body>
