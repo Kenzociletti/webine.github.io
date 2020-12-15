@@ -183,17 +183,17 @@ function printdoc() {
    document.body.innerHTML = originalContents;
    }
  
-if (localStorage.getItem("titledoc")) {
-  title.value = localStorage.getItem("titledoc");
-  document.title = localStorage.getItem("titledoc") + " - Weditor - Webine";
+if (localStorage.getItem("last_doc_title")) {
+  title.value = localStorage.getItem("last_doc_title");
+  document.title = localStorage.getItem("last_doc_title") + " - Weditor - Webine";
 }
  
-if (localStorage.getItem("doc")) {
-  editor.innerHTML = localStorage.getItem("doc");
+if (localStorage.getItem("last_doc_data")) {
+  editor.innerHTML = localStorage.getItem("last_doc_data");
 }
   
 if (localStorage.getItem("docsList")) {
-  docsList.innerHTML = localStorage.getItem("docsList");
+  docsList.innerHTML = localStorage.getItem("docs_list");
   var x, i;
   x = document.querySelectorAll(".dlist");
   for (i = 0; i < x.length; i++) {
@@ -207,19 +207,19 @@ if (localStorage.getItem("docsList")) {
   var x2, i2;
   x2 = document.querySelectorAll(".dltdocs");
   for (i2 = 0; i2 < x2.length; i2++) {
-    x2[i2].addEventListener("click", function () {this.parentElement.remove(); localStorage.setItem("docsList", docsList.innerHTML);});
+    x2[i2].addEventListener("click", function () {this.parentElement.remove(); localStorage.setItem("docs_list", docsList.innerHTML);});
   }
 }
   
 saveBtn.addEventListener("click", function() {
   if(title.value == "" || title.value == null) {
     title.value = "Document sans titre";
-    localStorage.setItem("titledoc", "Nouveau document");
+    localStorage.setItem("last_doc_title", "Nouveau document");
   } else {
-    localStorage.setItem("titledoc", title.value);
+    localStorage.setItem("last_doc_title", title.value);
   }
-  localStorage.setItem("doc", editor.innerHTML);
-  document.title = localStorage.getItem("titledoc") + " - Weditor - Webine";
+  localStorage.setItem("last_doc_data", editor.innerHTML);
+  document.title = localStorage.getItem("last_doc_title") + " - Weditor - Webine";
   sb("Enregistrement...");
   saveBtn.innerHTML = "Enregistré";
   saveBtn.className = "edt saved";
@@ -233,7 +233,7 @@ saveBtn.addEventListener("click", function() {
   e.setAttribute("doctitle", title.value);
   e.setAttribute("docdata", editor.innerHTML);
   e.addEventListener("click", function () {editor.innerHTML = this.getAttribute('docdata'); title.value = this.getAttribute('doctitle'); document.title = this.getAttribute('doctitle') + " - Weditor - Webine";document.querySelector("#modal-docs").style.display = "none";});
-  e3.onclick = function () {this.parentElement.remove(); localStorage.setItem("docsList", docsList.innerHTML);};
+  e3.onclick = function () {this.parentElement.remove(); localStorage.setItem("docs_list", docsList.innerHTML);};
   const dnf = new Date();
   const ye = new Intl.DateTimeFormat('fr', { year: 'numeric' }).format(dnf);
   const mo = new Intl.DateTimeFormat('fr', { month: 'short' }).format(dnf);
@@ -250,7 +250,7 @@ saveBtn.addEventListener("click", function() {
   e2.appendChild(h2);
   e3.appendChild(h3);
   docsList.appendChild(e);
-  localStorage.setItem("docsList", docsList.innerHTML);
+  localStorage.setItem("docs_list", docsList.innerHTML);
 });
   
 function confirmsavedoc() {
@@ -261,8 +261,8 @@ function confirmsavedoc() {
 }
   
 function confirmdelete() {
-  localStorage.removeItem('titledoc');
-  localStorage.removeItem('doc');
+  localStorage.removeItem('last_doc_title');
+  localStorage.removeItem('last_doc_data');
   title.value = "Nouveau document";
   editor.innerHTML = "";
   document.querySelector("#modal-confirm").style.display = "none";
