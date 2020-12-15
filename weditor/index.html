@@ -470,6 +470,8 @@ function gsl() {
   document.querySelector('#shareurl').value='https://www.webine.fr/weditor/share#dt='+document.querySelector('.titledoc').value+'&dd='+editor.innerHTML;
   $("#shareurl").val($("#shareurl").val().replaceAll('<', '%3C'));
   $("#shareurl").val($("#shareurl").val().replaceAll('>', '%3E'));
+  $("#shareurl").val($("#shareurl").val().replaceAll('"', '%22'));
+  $("#shareurl").val($("#shareurl").val().replaceAll(' ', '%C2%A0'));
   openmodal('modal-share', 'modalbtnc8');
 }
 </script>
