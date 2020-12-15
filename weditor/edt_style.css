@@ -67,6 +67,51 @@
   color: #ccc;
 }
 
+#snackbar {
+  font-family: 'Nunito', sans-serif;
+  visibility: hidden;
+  max-width: 300px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  top: 15px;
+  right: 15px;
+  font-size: 15px;
+  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.3);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.3);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.3);
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {right: 0; opacity: 0;} 
+  to {right: 15px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {right: 0; opacity: 0;}
+  to {right: 15px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {right: 15px; opacity: 1;} 
+  to {right: 0px; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {right: 15px; opacity: 1;}
+  to {right: 0px; opacity: 0;}
+}
+
 div[weditor] {
   height: 480px;
   border: 1px solid #d2d2d2;
