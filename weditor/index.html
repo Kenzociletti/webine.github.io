@@ -188,7 +188,7 @@ function setcolor(color) {
 }
   
 function printdoc() {
-   var printContents = "<h1 style='font-family: Arial, sans-serif;'>" + title.value + "</h1>" +  "<p style='font-family: Arial, sans-serif !important'>" + editor.innerHTML + "</p>";
+   var printContents = "<h1 style='font-family: 'Open Sans', Arial, sans-serif;'>" + title.value + "</h1>" +  "<div style='font-family: 'Open Sans', Arial, sans-serif !important'>" + editor.innerHTML + "</div>";
    var originalContents = document.body.innerHTML;
    document.body.innerHTML = printContents; 
    window.print();  
