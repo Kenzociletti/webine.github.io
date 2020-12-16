@@ -157,7 +157,7 @@
   box-shadow: 0px 0px 55px 1px rgba(119, 119, 119, 0.5);
   -moz-box-shadow: 0px 0px 55px 1px rgba(119, 119, 119, 0.5);
   -webkit-box-shadow: 0px 0px 55px 1px rgba(119, 119, 119, 0.5);
-  font-family: Arial, sans-serif !important;
+  font-family: 'Open Sans', Arial, sans-serif !important;
 }
 
 .edt_box {
