@@ -148,18 +148,29 @@
   to {right: 0px; opacity: 0;}
 }
 
-div[weditor] {
+[weditor] {
+  display: block;
+  outline: none;
+  height: auto;
+  padding: 20px;
+  margin: 8%;
+  box-shadow: 0px 0px 55px 1px rgba(119, 119, 119, 0.5);
+  -moz-box-shadow: 0px 0px 55px 1px rgba(119, 119, 119, 0.5);
+  -webkit-box-shadow: 0px 0px 55px 1px rgba(119, 119, 119, 0.5);
+  font-family: Arial, sans-serif !important;
+}
+
+.edt_box {
   height: 480px;
   border: 1px solid #d2d2d2;
   background-color: #ffffff;
   padding: 10px;
   margin: 0 !important;
-  font-family: Arial, sans-serif !important;
   overflow: auto;
   outline: 0;
 }
 
-div[weditor]:-webkit-full-screen {
+.edt_box:-webkit-full-screen {
   padding: 40px;
   cursor: default !important;
 }
@@ -313,20 +324,20 @@ textarea[code] {
   background: #555; 
 }
 
-[weditor]::-webkit-scrollbar {
+.edt_box::-webkit-scrollbar {
   width: 10px;
 }
 
-[weditor]::-webkit-scrollbar-track {
+.edt_box::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
 
-[weditor]::-webkit-scrollbar-thumb {
+.edt_box::-webkit-scrollbar-thumb {
   cursor: default !important;
   background: #888;
 }
 
-[weditor]::-webkit-scrollbar-thumb:hover {
+.edt_box::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
 
@@ -477,18 +488,6 @@ textarea[code] {
 
 .mini-link:hover {
   text-decoration: underline;
-}
-
-div[weditor] {
-  height: 980px;
-  border: 1px solid #d2d2d2;
-  background-color: #ffffff;
-  padding: 10px;
-  font-size: 60px;
-  margin: 0 !important;
-  font-family: Arial, sans-serif !important;
-  overflow: auto;
-  outline: 0;
 }
 
 textarea[code] {
