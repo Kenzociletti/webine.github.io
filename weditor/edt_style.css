@@ -169,7 +169,8 @@ body {
 
 .edt_box {
   height: 430px;
-  border: 1px solid #d2d2d2;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
   background-color: #f8f9fa;
   padding: 10px;
   margin: 0 !important;
