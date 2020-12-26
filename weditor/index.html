@@ -86,27 +86,22 @@ if (location.protocol !== 'https:') {
 </div>
 <div id="modal-info" class="modalcss">
   <div class="modal-css-content modal_resize">
-    <p style="display: block;width: 100%;background-color: white;padding-top: 10px;padding-bottom: 10px;position: -webkit-sticky;position: sticky;top: -20px;border-bottom: 1px solid #d2d2d2" class="modal-title sticky">À propos de Weditor</p>
+    <p class="modal-title">À propos de Weditor</p>
     <h4>Weditor est-il le seul éditeur de texte en ligne le plus complet ?</h4>
-    <p>Weditor est connu du fait de son accessibilité et qu'il est gratuit. Comme tous les produits Webine, tous ont un but précis : proposer des services pour faciliter la vie, le développement web ; c'est l'un des premiers engagements de notre société.</p>
+    <p>Weditor est connu du fait de son accessibilité et qu'il est gratuit. Comme tous les produits Webine, tous ont un but précis : proposer des services pour faciliter la vie, le développement web. C'est l'un des premiers engagements de notre société.</p>
     <h4>Comment fonctionne l'enregistrement des documents ?</h4>
-    <p>Comme il n'y a pas de compte sur Weditor, pour enregistrer votre document nous utilisons les cookies plus précisément le stockage local. Votre document sera enregistré sur votre navigateur et seul vous y avez accès (uniquement sur votre navigateur actuel). Sachez que nous n'avons pas accès à vos documents.</p>
+    <p>Comme il n'y a pas de compte sur Weditor, pour enregistrer votre document nous utilisons les cookies plus précisément le <b>stockage local</b>. Votre document serat enregistré sur votre navigateur et seul vous y aurez accès (uniquement sur votre navigateur actuel). Sachez que nous n'avons pas accès à vos documents.</p>
     <h4>Développement web</h4>
     <p>La plupart des produits Webine sont pour les développeurs de sites web. Sur weditor vous avez la possibilité d'obtenir de code HTML de votre document.</p>
     <h4>Documents</h4>
-    <p>Tous vos documents enregistrés sont accessibles en cliquant sur "Documents". Cliquez sur "Supprimer" pour supprimer un document.</p>
+    <p>Tous vos documents enregistrés sont accessibles en plusieurs versions en cliquant sur "Documents". Cliquez sur "Supprimer" pour supprimer un document.</p>
+    <p style="color:red">Attention : Vos documents ne s'enregistrent pas automatiquement.</p>
     <h4>Verrouillage de l'édition</h4>
-    <p>Vous avez la possibilité de verrouiller l'édition des documents avec un mot de passe. La première fois, un mot de passe temporaire vous sera demandé. Lors du déverrouillage, le mot de passe serat réinitialisé. En cas d'oubli du mot de passe il est facile de le récupérer. en nous contactant <a href="">ici.</a></p>
-    <a style="text-decoration:none;color:black" href="https://www.webine.ga/support">
-    <table>
-    <tr>
-    <th><img draggable="false" width="250px" src="https://cdn.glitch.com/c7c5feb5-1f19-4756-b398-9ea7582304e7%2F6b77404dd7ecde32da39f8a7c3ba4aa7.jpg?v=1603214305936"></th>
-    <th style="font-weight:normal">Besoin d'aide ? Nous sommes la pour vous aider.</th>
-    </tr>
-    </table>
-    </a>
-    <button onclick="localStorage.clear();alert('Le stockage a bien été réinitialisé')" class="confirm-btn delete">Réinitialiser le stockage</button>
-    <br><br>
+    <p>Vous avez la possibilité de verrouiller l'édition des documents avec un mot de passe. La première fois, un mot de passe temporaire vous sera demandé. Lors du déverrouillage, le mot de passe serat réinitialisé. En cas d'oubli du mot de passe il est facile de le récupérer en nous contactant.</p>
+    <a target="_blank" href="https://www.webine.fr/support">
+Besoin d'aide ? Nous sommes la pour vous aider.</a>
+    <p>Développé par <span style="cursor:help" title="Kenzo Ciletti est un jeune de 14 ans dont la passion est de développer des sites web. Il est le créateur de Webine et tout ses produits.">Kenzo Ciletti</span></p>
+    <br>
     <button id="modalbtnc5" class="confirm-btn close">Fermer</button>
   </div>
 </div>
@@ -192,7 +187,7 @@ function setcolor(color) {
 }
   
 function printdoc() {
-   var printContents = "<h1 style='font-family: 'Open Sans', Arial, sans-serif;'>" + title.value + "</h1>" +  "<div style='font-family: 'Open Sans', Arial, sans-serif !important'>" + editor.innerHTML + "</div>";
+   var printContents = "<div style='font-family:Open Sans;'>" + editor.innerHTML + "</div>";
    var originalContents = document.body.innerHTML;
    document.body.innerHTML = printContents; 
    window.print();  
