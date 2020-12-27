@@ -437,6 +437,10 @@ function addsignature() {
   var signature = document.querySelector("#signature").value;
   localStorage.setItem("signature",signature);
   document.querySelector("#modal-signature").style.display = "none";
+  var editorhtml = editor.innerHTML;
+  document.querySelector("button.signature").innerHTML = "Signature";
+  document.querySelector("#signature").value = localStorage.getItem("signature");
+  editor.innerHTML = editorhtml + "<br>" + "<hr>" + "<font color='#9b9595'>" + localStorage.getItem("signature") + "</font>";
 }
 
 if (localStorage.getItem("signature")) {
