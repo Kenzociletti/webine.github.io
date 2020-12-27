@@ -1,21 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+}
 
 body {
   margin: 0 !important;
 }
 
 ::selection {
- color: black;
- background: #b3d4fb;
+  color: black;
+  background: #b3d4fb;
  }
 
 ::-moz-selection {
- color: black;
- background: #b3d4fb;
+  color: black;
+  background: #b3d4fb;
  }
  
 .edt {
@@ -49,7 +48,7 @@ body {
 }
 
 .titledoc {
-  font-family: 'Questrial', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   padding: 6px;
   font-size: 20px;
   outline: 0;
@@ -67,7 +66,7 @@ body {
 
 .mini-link {
   cursor: pointer;
-  font-family: 'Nunito', Arial, sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
   color: grey;
   font-size: 14px;
@@ -128,7 +127,7 @@ a:hover {
 }
 
 #snackbar {
-  font-family: 'Nunito', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   visibility: hidden;
   max-width: 300px;
   background-color: #000000;
@@ -440,23 +439,6 @@ textarea[code] {
 [aria-label]:focus {
   outline: none;
 }
-
-.styleslist {
-  width: 100%;
-  border: 1px solid #d2d2d2;
-  font-family: 'Nunito', Arial, sans-serif;
-  border-radius: 3px;
-  background-color: white;
-  margin-bottom: 5px;
-  color: black;
-  padding: 14px 15px;
-  cursor: pointer;
-  outline: 0;
-}
-
-.styleslist:hover {
-  border: 1px solid #0167b8;
-}
   
 @media screen and (max-device-width:480px) {
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
@@ -467,7 +449,7 @@ textarea[code] {
   
 .edt {
   border: none;
-  font-family: 'Nunito', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   border-radius: 3px;
   background-color: white;
   font-size: 60px;
@@ -508,7 +490,7 @@ textarea[code] {
 
 .mini-link {
   cursor: pointer;
-  font-family: 'Nunito', Arial, sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
   color: grey;
   font-size: 50px;
@@ -614,7 +596,7 @@ textarea[code] {
   height: 100%;
   box-shadow: none;
   overflow: auto;
-  font-family: 'Questrial', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
   
 .modal-css-content::-webkit-scrollbar {
