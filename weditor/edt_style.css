@@ -383,7 +383,8 @@ textarea[code] {
   opacity: 1;
   box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
   -moz-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
-  -webkit-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);}
+  -webkit-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+}
 
 .cancel {background-color: #43b581;border: 1px solid #3a9e70;opacity: 0.8;transition-duration: 0.2s;}
 .cancel:hover {
