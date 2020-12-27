@@ -188,7 +188,7 @@ function setcolor(color) {
   
 function printdoc() {
    saveBtn.click();
-   var printContents = "<div style='font-family:Open Sans;'>" + editor.innerHTML + "</div>";
+   var printContents = editor.innerHTML;
    var originalContents = document.body.innerHTML;
    document.body.innerHTML = printContents; 
    window.print();  
