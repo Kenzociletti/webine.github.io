@@ -127,7 +127,7 @@ a:hover {
 #snackbar {
   visibility: hidden;
   max-width: 300px;
-  background-color: #000000;
+  background-color: #343a40;
   color: #fff;
   text-align: center;
   border-radius: 4px;
@@ -373,22 +373,41 @@ textarea[code] {
   color: white;
   font-size: 15px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
-  padding: 9px 15px;
+  padding: 8px 12px;
   cursor: pointer;
   outline: none;
 }
 
-.delete {background-color: #ff3838;opacity: 0.8;transition-duration: 0.3s;}
-.delete:hover {opacity: 1;}
+.delete {background-color: #ff3838;border: 1px solid #ee3434;opacity: 0.8;transition-duration: 0.2s;}
+.delete:hover {
+  opacity: 1;
+  box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+  -moz-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+  -webkit-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);}
 
-.cancel {background-color: #43b581;opacity: 0.8;transition-duration: 0.3s;}
-.cancel:hover {opacity: 1;}
+.cancel {background-color: #43b581;border: 1px solid #3a9e70;opacity: 0.8;transition-duration: 0.2s;}
+.cancel:hover {
+  opacity: 1;
+  box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+  -moz-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+  -webkit-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+}
   
-.close {background-color: #1a73e8;opacity: 0.8;transition-duration: 0.3s;}
-.close:hover {opacity: 1;}
+.close {background-color: #1a73e8;border: 1px solid #155dbb;opacity: 0.8;transition-duration: 0.2s;}
+.close:hover {
+  opacity: 1;
+  box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+  -moz-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+  -webkit-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+}
  
-.newdoc {background-color: #ffb42e;opacity: 0.8;transition-duration: 0.3s;}
-.newdoc:hover {opacity: 1;}
+.newdoc {background-color: #ffb42e;border: 1px solid #eea729;opacity: 0.8;transition-duration: 0.2s;}
+.newdoc:hover {
+  opacity: 1;
+  box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+  -moz-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+  -webkit-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
+}
 
 .colorbtn {
   border: none;
@@ -420,7 +439,7 @@ textarea[code] {
   z-index: 1;
   white-space: nowrap;
   padding: 5px 14px;
-  background: #000000;
+  background: #343a40;
   color: #fff;
   border-radius: 4px;
   font-size: 1rem;
