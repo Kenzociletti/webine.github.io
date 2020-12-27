@@ -113,7 +113,7 @@ Besoin d'aide ? Nous sommes la pour vous aider.</a>
     <br><br>
     <button id="modalbtnc6" class="confirm-btn cancel">Annuler</button>
     <button onclick="addsignature()" class="confirm-btn close">Enregistrer</button>
-    <button onclick="localStorage.removeItem('signature');alert('La signature a bien été supprimée');document.querySelector('#signature').value=''" class="confirm-btn delete">Supprimer la signature</button>
+    <button onclick="localStorage.removeItem('signature');sb('La signature a bien été supprimée');document.querySelector('#signature').value='';document.querySelector('#modal-signature').style.display='none'" class="confirm-btn delete">Supprimer la signature</button>
   </div>
 </div>
   
@@ -401,7 +401,7 @@ if (localStorage.getItem("pass")) {
     document.querySelector(".lock").ariaLabel = "Verrouiller l'édition";
     localStorage.removeItem('pass');
   } else {
-    alert("Mot de passe incorrect !");
+    sb("Mot de passe incorrect !");
     editor.contentEditable = "false";
   }
 } else {
@@ -415,7 +415,7 @@ if (localStorage.getItem("pass")) {
   document.querySelector(".lock").style.color = "red";
   document.querySelector(".lock").ariaLabel = "Deverrouiller l'édition";
   } else {
-  alert("Veuillez entrer un mot de passe !");
+  sb("Veuillez entrer un mot de passe !");
   title.removeAttribute("readonly");
   editor.contentEditable = "true";
   }
