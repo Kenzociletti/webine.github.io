@@ -285,7 +285,7 @@ textarea[code] {
 .modalinput {
   width: 100%;
   padding: 10px;
-  font-size: 14px;
+  font-size: 16px;
   border: 2px solid #f5b512;
   border-radius: 4px;
   box-sizing: border-box;
@@ -365,6 +365,7 @@ textarea[code] {
 .modal-title {
   color: black;
   font-size: 24px;
+  margin-top: 3px;
 }
   
 .confirm-btn {
@@ -378,7 +379,7 @@ textarea[code] {
   outline: none;
 }
 
-.delete {background-color: #ff3838;border: 1px solid #ee3434;opacity: 0.8;transition-duration: 0.2s;}
+.delete {background-color: #ff3838;border: 1px solid #ee3434;opacity: 0.8;}
 .delete:hover {
   opacity: 1;
   box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
@@ -386,7 +387,7 @@ textarea[code] {
   -webkit-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
 }
 
-.cancel {background-color: #43b581;border: 1px solid #3a9e70;opacity: 0.8;transition-duration: 0.2s;}
+.cancel {background-color: #43b581;border: 1px solid #3a9e70;opacity: 0.8;}
 .cancel:hover {
   opacity: 1;
   box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
@@ -394,7 +395,7 @@ textarea[code] {
   -webkit-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
 }
   
-.close {background-color: #1a73e8;border: 1px solid #155dbb;opacity: 0.8;transition-duration: 0.2s;}
+.close {background-color: #1a73e8;border: 1px solid #155dbb;opacity: 0.8;}
 .close:hover {
   opacity: 1;
   box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
@@ -402,7 +403,7 @@ textarea[code] {
   -webkit-box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
 }
  
-.newdoc {background-color: #ffb42e;border: 1px solid #eea729;opacity: 0.8;transition-duration: 0.2s;}
+.newdoc {background-color: #ffb42e;border: 1px solid #eea729;opacity: 0.8;}
 .newdoc:hover {
   opacity: 1;
   box-shadow: 0px 7px 10px 0px rgba(119, 119, 119, 0.15);
