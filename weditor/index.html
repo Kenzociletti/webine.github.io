@@ -500,6 +500,7 @@ function quitPM() {
 function sb(msg) {
     var x = document.getElementById("snackbar");
     x.innerHTML = msg;
+    new Audio('http://www.webine.fr/done-for-you-612.mp3').play();
     x.className = "show";
     setTimeout(function(){x.className = x.className.replace("show", ""); x.innerHTML = "";}, 3000);
 }
