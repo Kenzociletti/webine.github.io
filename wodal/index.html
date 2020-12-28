@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="https://www.webine.fr/favicon_webine.gif" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="https://www.webine.fr/wodal/style.css" rel="stylesheet">
+  <link href="https://www.webine.fr/libs/webinecss.css" rel="stylesheet">
   <script src="https://www.webine.fr/wodal/params.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -43,19 +43,25 @@
 <h3>Comment ajouter Wodal à votre site web ?</h3>
 <p>Pour ajouter Wodal à votre site web, collez le code ci-dessous entre les balises <code>head</code> et <code>/head</code> de votre code source.</p>
 <div class="card card-body">
-<blockquote><font size="5px" color="#009900">&lt;<font color="#000000">head</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">link</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;https://www.webine.fr/wodal/style.css&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;stylesheet&quot;</font>&gt;</font><br/>
+<blockquote><font color="#009900">&lt;<font color="#000000">head</font>&gt;</font><br/>
+<font color="#009900">&lt;<font color="#000000">link</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;https://www.webine.fr/libs/webinecss.css&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;stylesheet&quot;</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#000000">script</font>&nbsp;<font color="#000066">src</font><font color="#66cc66">=</font><font color="#ff0000">&quot;https://www.webine.fr/wodal/params.js&quot;</font>&gt;&lt;<font color="#66cc66">/</font><font color="#000000">script</font>&gt;</font><br/>
-<font size="5px" color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">head</font>&gt;</font></blockquote>
+<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">head</font>&gt;</font></blockquote>
 </div><br>
 <p>Puis, ajoutez le code HTML ci-dessous (peu importe son emplacement).</p>
 <div class="card card-body">
 <blockquote><font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal&quot;</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-content&quot;</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-title&quot;</font>&gt;</font>Titre&nbsp;de&nbsp;la&nbsp;modal<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
-Contenu&nbsp;de&nbsp;la&nbsp;modal<br/>
-<font color="#009900">&lt;<font color="#000000">br</font>&gt;&lt;<font color="#000000">br</font>&gt;&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modalbtnc1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-btn&nbsp;theme1&quot;</font>&gt;</font>Fermer<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-content&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-header&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-title&quot;</font>&gt;</font>Titre&nbsp;de&nbsp;la&nbsp;modal<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-body&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&gt;</font>Contenu&nbsp;de&nbsp;la&nbsp;modal<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-footer&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modalbtnc1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn&nbsp;btn-t3&quot;</font>&gt;</font>Fermer<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></blockquote>
 </div><br>
 <h4>Comment s'ouvre ma modal ?</h4>
@@ -65,19 +71,25 @@ Contenu&nbsp;de&nbsp;la&nbsp;modal<br/>
 <blockquote><font color="#00bbdd">&lt;!DOCTYPE&nbsp;html&gt;</font><br/>
 <font color="#009900">&lt;<font color="#000000">html</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#000000">head</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">link</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;https://www.webine.fr/wodal/style.css&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;stylesheet&quot;</font>&gt;</font><br/>
+<font color="#009900">&lt;<font color="#000000">link</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;https://www.webine.fr/libs/webinecss.css&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;stylesheet&quot;</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#000000">script</font>&nbsp;<font color="#000066">src</font><font color="#66cc66">=</font><font color="#ff0000">&quot;https://www.webine.fr/wodal/params.js&quot;</font>&gt;&lt;<font color="#66cc66">/</font><font color="#000000">script</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">head</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#000000">body</font>&gt;</font><br/>
 &nbsp;<br/>
-<font color="#009900">&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">onclick</font><font color="#66cc66">=</font><font color="#ff0000">&quot;openmodal('modal1',&nbsp;'modalbtnc1')&quot;</font>&gt;</font>Ouvrir&nbsp;la&nbsp;modal<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
+<font color="#009900">&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn&nbsp;btn-t1&quot;</font>&nbsp;<font color="#000066">onclick</font><font color="#66cc66">=</font><font color="#ff0000">&quot;openmodal('modal1',&nbsp;'modalbtnc1');&quot;</font>&gt;</font>Ouvrir&nbsp;la&nbsp;modal<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
 &nbsp;<br/>
 <font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal&quot;</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-content&quot;</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-title&quot;</font>&gt;</font>Titre&nbsp;de&nbsp;la&nbsp;modal<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
-Contenu&nbsp;de&nbsp;la&nbsp;modal<br/>
-<font color="#009900">&lt;<font color="#000000">br</font>&gt;&lt;<font color="#000000">br</font>&gt;&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modalbtnc1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-btn&nbsp;theme1&quot;</font>&gt;</font>Fermer<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-content&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-header&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-title&quot;</font>&gt;</font>Titre&nbsp;de&nbsp;la&nbsp;modal<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-body&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&gt;</font>Contenu&nbsp;de&nbsp;la&nbsp;modal<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-footer&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modalbtnc1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn&nbsp;btn-t3&quot;</font>&gt;</font>Fermer<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
 &nbsp;<br/>
 <font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">body</font>&gt;</font><br/>
@@ -88,46 +100,62 @@ Contenu&nbsp;de&nbsp;la&nbsp;modal<br/>
 <blockquote><font color="#00bbdd">&lt;!DOCTYPE&nbsp;html&gt;</font><br/>
 <font color="#009900">&lt;<font color="#000000">html</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#000000">head</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">link</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;https://www.webine.fr/wodal/style.css&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;stylesheet&quot;</font>&gt;</font><br/>
+<font color="#009900">&lt;<font color="#000000">link</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;https://www.webine.fr/libs/webinecss.css&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;stylesheet&quot;</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#000000">script</font>&nbsp;<font color="#000066">src</font><font color="#66cc66">=</font><font color="#ff0000">&quot;https://www.webine.fr/wodal/params.js&quot;</font>&gt;&lt;<font color="#66cc66">/</font><font color="#000000">script</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">head</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#000000">body</font>&gt;</font><br/>
 &nbsp;<br/>
-<font color="#009900">&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">onclick</font><font color="#66cc66">=</font><font color="#ff0000">&quot;openmodal('modal1',&nbsp;'modalbtnc1')&quot;</font>&gt;</font>Ouvrir&nbsp;la&nbsp;modal&nbsp;1<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
-&nbsp;<br/>
-<font color="#009900">&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">onclick</font><font color="#66cc66">=</font><font color="#ff0000">&quot;openmodal('modal2',&nbsp;'modalbtnc2')&quot;</font>&gt;</font>Ouvrir&nbsp;la&nbsp;modal&nbsp;2<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
+<font color="#009900">&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn&nbsp;btn-t1&quot;</font>&nbsp;<font color="#000066">onclick</font><font color="#66cc66">=</font><font color="#ff0000">&quot;openmodal('modal1',&nbsp;'modalbtnc1');&quot;</font>&gt;</font>Ouvrir&nbsp;la&nbsp;modal&nbsp;1<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
+<font color="#009900">&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn&nbsp;btn-t1&quot;</font>&nbsp;<font color="#000066">onclick</font><font color="#66cc66">=</font><font color="#ff0000">&quot;openmodal('modal2',&nbsp;'modalbtnc2');&quot;</font>&gt;</font>Ouvrir&nbsp;la&nbsp;modal&nbsp;2<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
 &nbsp;<br/>
 <font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal&quot;</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-content&quot;</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-title&quot;</font>&gt;</font>Titre&nbsp;de&nbsp;la&nbsp;modal&nbsp;1<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
-Contenu&nbsp;de&nbsp;la&nbsp;modal&nbsp;1<br/>
-<font color="#009900">&lt;<font color="#000000">br</font>&gt;&lt;<font color="#000000">br</font>&gt;&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modalbtnc1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-btn&nbsp;theme1&quot;</font>&gt;</font>Fermer<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-content&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-header&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-title&quot;</font>&gt;</font>Titre&nbsp;de&nbsp;la&nbsp;modal&nbsp;1<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-body&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&gt;</font>Contenu&nbsp;de&nbsp;la&nbsp;modal&nbsp;1<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-footer&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modalbtnc1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn&nbsp;btn-t3&quot;</font>&gt;</font>Fermer<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
 &nbsp;<br/>
 <font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal2&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal&quot;</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-content&quot;</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-title&quot;</font>&gt;</font>Titre&nbsp;de&nbsp;la&nbsp;modal&nbsp;2<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
-Contenu&nbsp;de&nbsp;la&nbsp;modal&nbsp;2<br/>
-<font color="#009900">&lt;<font color="#000000">br</font>&gt;&lt;<font color="#000000">br</font>&gt;&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modalbtnc2&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-btn&nbsp;theme2&quot;</font>&gt;</font>Fermer<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
-<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-content&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-header&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-title&quot;</font>&gt;</font>Titre&nbsp;de&nbsp;la&nbsp;modal&nbsp;2<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-body&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&gt;</font>Contenu&nbsp;de&nbsp;la&nbsp;modal&nbsp;2<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;wodal-footer&quot;</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">button</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modalbtnc2&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn&nbsp;btn-t3&quot;</font>&gt;</font>Fermer<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">button</font>&gt;</font><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
+&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font><br/>
 &nbsp;<br/>
 <font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">body</font>&gt;</font><br/>
 <font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">html</font>&gt;</font></blockquote>
 </div><br>
-<button class="btn btn-primary" onclick="openmodal('modal1', 'modalbtnc1')">Ouvrir la modal</button>
- 
+<button class="btn btn-primary" onclick="openmodal('modal1', 'modalbtnc1')">Ouvrir la modal</button> 
+
 <div id="modal1" class="wodal">
-<div class="wodal-content">
-<span class="close">&times;</span>
-<p class="wodal-title">Titre de la modal</p>
-Contenu de la modal
-<br><br><button id="modalbtnc1" class="wodal-btn theme1">Fermer</button>
-</div>
+  <div class="wodal-content">
+    <div class="wodal-header">
+      <p class="wodal-title">Titre de la modal</p>
+    </div>
+    <div class="wodal-body">
+      <p>Contenu de la modal</p>
+    </div>
+    <div class="wodal-footer">
+      <button id="modalbtnc1" class="btn btn-t3">Fermer</button>
+    </div>
+  </div>
 </div>
 
-<br><br><h4>Stylisez votre modal</h4>
+<br><br><h4>Stylisez votre modal avec Webine CSS</h4>
 <h5>Boutons</h5>
 <table class="table table-bordered">
     <thead>
@@ -138,55 +166,32 @@ Contenu de la modal
     </thead>
     <tbody>
       <tr>
-        <td><code>wodal-btn theme1</code></td>
-        <td><button class="wodal-btn theme1">Bouton</button></td>
+        <td><code>btn btn-t1</code></td>
+        <td><button class="btn btn-t1">Bouton</button></td>
       </tr>
       <tr>
-        <td><code>wodal-btn theme2</code></td>
-        <td><button class="wodal-btn theme2">Bouton</button></td>
+        <td><code>btn btn-t2</code></td>
+        <td><button class="btn btn-t2">Bouton</button></td>
       </tr>
       <tr>
-        <td><code>wodal-btn theme3</code></td>
-        <td><button class="wodal-btn theme3">Bouton</button></td>
+        <td><code>btn btn-t3</code></td>
+        <td><button class="btn btn-t3">Bouton</button></td>
       </tr>
       <tr>
-        <td><code>wodal-btn theme4</code></td>
-        <td><button class="wodal-btn theme4">Bouton</button></td>
+        <td><code>btn btn-t4</code></td>
+        <td><button class="btn btn-t4">Bouton</button></td>
+      </tr>
+      <tr>
+        <td><code>btn btn-t5</code></td>
+        <td><button class="btn btn-t5">Bouton</button></td>
       </tr>
     </tbody>
   </table>
-<h5>Autres</h5>
-<table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th>Aperçu</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>noselect</code></td>
-        <td><span class="noselect">Ce texte ne peut pas être sélectionné</span></td>
-      </tr>
-      <tr>
-        <td><code>wodal-input</code></td>
-        <td><input type="text" class="wodal-input"></td>
-      </tr>
-    </tbody>
-  </table>
-<br><br>
-</div>
+<a href="/webinecss">Voir toute la documentation de Webine CSS</a>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
   <p>© 2020 Webine</p>
 </div>
 
-<script>
-if (location.protocol !== 'https:') {  location.replace(`https:${location.href.substring(location.protocol.length)}`);
-}
-</script>
-<script>
-document.querySelector(_$_81e3[3]).onclick= function(){var _0xABD7,_0xABAC;_0xABD7= document.querySelectorAll(_$_81e3[4]);for(_0xABAC= 0;_0xABAC< _0xABD7.length;_0xABAC++){_0xABD7[_0xABAC].style.display= _$_81e3[2]}}
-</script>
 </body>
 </html>
