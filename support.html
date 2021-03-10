@@ -47,24 +47,19 @@ a:hover {
 .topbar-logo img {
  width: 180px;
 }
-  
-.wimage {
- width: 400px;
- float: left;
-}
 
-.contentbox {
+.content-box {
  margin-top: 1em;
  margin-bottom: 1em;
  margin-left: 10em;
  margin-right: 10em;
 }
   
-.ab-box {
+.pb-box {
  display: flex;
 }
 
-.answer-btn {
+.product-btn {
  width: 100%;
  flex: auto;
  margin: 8px;
@@ -79,21 +74,12 @@ a:hover {
  font-size: 18px;
  text-decoration: none !important;
  background-color: #ffffff;
- transition: 0.3s;
-}
- 
-.answer-btn:hover {
- margin-bottom: 10px;
 }
   
-.ab-weditor:hover {border-color: #1374e9;}
-.ab-wodal:hover {border-color: #949494;}
-.ab-notty:hover {border-color: #d1a059;}
-.ab-wideo:hover {border-color: #e12124;}
-  
-.answer-btn-product {
- width: 80px;
-}
+.pb-weditor:hover {border-color: #1374e9;}
+.pb-wodal:hover {border-color: #949494;}
+.pb-notty:hover {border-color: #d1a059;}
+.pb-wideo:hover {border-color: #e12124;}
   
 @media screen and (max-device-width:480px) {
 body {
@@ -108,42 +94,22 @@ h2 {
  margin: 0 !important;
 }
   
-.answer-btn {
+.product-btn {
  padding: 20px;
  border-width: 4px;
  border-radius: 18px;
  font-size: 1em;
 }
   
-.wimage {
- display: none;
-}
-  
 img {
  width: 300px !important;
 }
 
-.contentbox {
+.content-box {
  margin-top: 1em;
  margin-bottom: 1em;
  margin-left: 1em;
  margin-right: 1em;
-}
-  
-.ad {
- font-size: 0.8em !important;
-}
-}
-  
-.ad {
- background-color: #ffffff;
- font-size: 12px;
- color: #999;
-}
-  
-.ad img {
- width: 100% !important;
- border: 1px solid #999;
 }
   
 .footer {
@@ -160,17 +126,17 @@ img {
 <img draggable="false" src="logo_webine.gif">
 </div>
 
-<div class="contentbox">
+<div class="content-box">
 <div style="display:inline-block;width:100%">
-<img class="wimage" draggable="false" src="https://zupimages.net/up/21/05/8bws.png"><h1 style="margin-top:0px">Bienvenue sur le centre d'aide de Webine</h1>
+<img style="300px" draggable="false" src="https://zupimages.net/up/21/05/8bws.png"><h1 style="margin-top:0px">Bienvenue sur le centre d'aide de Webine</h1>
 <h2>Comment pouvons-nous vous aider ?</h2>
 </div>
 <h3>Avec quel produit avez-vous rencontré un problème ?</h3>
-<div class="ab-box">
-<a href="hc/weditor" class="answer-btn ab-weditor">Weditor</a>
-<a href="hc/wideo" class="answer-btn ab-wideo">Wideo</a>
-<a href="hc/wodal" class="answer-btn ab-wodal">Wodal</a>
-<a href="hc/other" class="answer-btn">Autre</a>
+<div class="pb-box">
+<a href="hc/weditor" class="product-btn pb-weditor">Weditor</a>
+<a href="hc/wideo" class="product-btn pb-wideo">Wideo</a>
+<a href="hc/wodal" class="product-btn pb-wodal">Wodal</a>
+<a href="hc/other" class="product-btn">Autre</a>
 </div>
 </div>
 
